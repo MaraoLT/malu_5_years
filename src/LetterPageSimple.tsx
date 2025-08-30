@@ -8,16 +8,17 @@ export function LetterPageSimple() {
     <div
       style={{
         width: "100vw",
-        height: "100vh",
+        minHeight: "100vh",
         background:
           "linear-gradient(-45deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e)",
         backgroundSize: "400% 400%",
         animation: "gradient 15s ease infinite",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
         fontFamily: "Georgia, serif",
-        overflow: "auto",
+        overflowY: "scroll",
+        overflowX: "hidden",
+        padding: "0",
+        margin: "0",
+        position: "relative",
       }}
     >
       <style>{`
@@ -36,7 +37,8 @@ export function LetterPageSimple() {
           borderRadius: "20px",
           boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
           backdropFilter: "blur(10px)",
-          margin: "20px",
+          margin: "40px auto",
+          position: "relative",
         }}
       >
         <h1

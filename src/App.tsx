@@ -57,10 +57,10 @@ export default function App() {
       oscillator2.frequency.setValueAtTime(1047 * 2, currentTime + 0.6);
       oscillator3.frequency.setValueAtTime(1047 / 2, currentTime + 0.6);
 
-      // Envelope de volume (attack, sustain, decay) - Volume mais baixo
+      // Envelope de volume (attack, sustain, decay) - Volume ainda mais baixo
       gainNode.gain.setValueAtTime(0, currentTime);
-      gainNode.gain.linearRampToValueAtTime(0.15, currentTime + 0.05);
-      gainNode.gain.setValueAtTime(0.15, currentTime + 0.8);
+      gainNode.gain.linearRampToValueAtTime(0.08, currentTime + 0.05);
+      gainNode.gain.setValueAtTime(0.08, currentTime + 0.8);
       gainNode.gain.exponentialRampToValueAtTime(0.01, currentTime + 1.2);
 
       // Iniciar e parar os osciladores
