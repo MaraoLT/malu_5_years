@@ -30,28 +30,28 @@ export default function App() {
       gainNode.connect(audioContext.destination);
 
       // Configurar como onda quadrada para som mais "metálico"
-      oscillator1.type = 'sawtooth';
-      oscillator2.type = 'sawtooth';
-      oscillator3.type = 'triangle';
+      oscillator1.type = "sawtooth";
+      oscillator2.type = "sawtooth";
+      oscillator3.type = "triangle";
 
       // Sequência de notas da trompeta (fanfarra)
       const currentTime = audioContext.currentTime;
-      
+
       // Primeira nota (C5 - 523 Hz)
       oscillator1.frequency.setValueAtTime(523, currentTime);
       oscillator2.frequency.setValueAtTime(523 * 2, currentTime); // Oitava superior
       oscillator3.frequency.setValueAtTime(523 / 2, currentTime); // Oitava inferior
-      
+
       // Segunda nota (E5 - 659 Hz) após 0.2s
       oscillator1.frequency.setValueAtTime(659, currentTime + 0.2);
       oscillator2.frequency.setValueAtTime(659 * 2, currentTime + 0.2);
       oscillator3.frequency.setValueAtTime(659 / 2, currentTime + 0.2);
-      
+
       // Terceira nota (G5 - 784 Hz) após 0.4s
       oscillator1.frequency.setValueAtTime(784, currentTime + 0.4);
       oscillator2.frequency.setValueAtTime(784 * 2, currentTime + 0.4);
       oscillator3.frequency.setValueAtTime(784 / 2, currentTime + 0.4);
-      
+
       // Nota final sustentada (C6 - 1047 Hz) após 0.6s
       oscillator1.frequency.setValueAtTime(1047, currentTime + 0.6);
       oscillator2.frequency.setValueAtTime(1047 * 2, currentTime + 0.6);
@@ -67,7 +67,7 @@ export default function App() {
       oscillator1.start(currentTime);
       oscillator2.start(currentTime);
       oscillator3.start(currentTime);
-      
+
       oscillator1.stop(currentTime + 1.2);
       oscillator2.stop(currentTime + 1.2);
       oscillator3.stop(currentTime + 1.2);
